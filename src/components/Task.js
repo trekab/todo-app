@@ -2,10 +2,10 @@ import React from "react";
 
 const Task = ({ task }) => {
   return (
-    <div className="task">
+    <li className="task">
       <input type="checkbox" />
       {task}
-    </div>
+    </li>
   );
 };
 
