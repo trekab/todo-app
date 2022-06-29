@@ -261,4 +261,12 @@ input[type="text"]:focus {
   .task-list__footer {
     font-size: 14px;
   }
+
+  .cross-icon{
+    display: none;
+  }
+
+  .task:hover > .cross-icon {
+    display: block;
+  }
 }
