@@ -268,5 +268,7 @@ input[type="text"]:focus {
 
   .task:hover > .cross-icon {
     display: block;
+    width: 18px;
+    height: 18px;
   }
 }
