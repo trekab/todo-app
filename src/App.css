@@ -3,6 +3,7 @@
 :root {
   --bg-img: url(./images/bg-mobile-light.jpg);
   --form-bg: #ffffff;
+  --input-text-color: #9495a5;
   --input-focus-color: #393a4b;
   --body-bg-color: #f2f2f2;
   --task-border: #e3e4f1;
@@ -22,6 +23,7 @@
 body[data-theme="light"] {
   --bg-img: url(./images/bg-mobile-light.jpg);
   --form-bg: #ffffff;
+  --input-text-color: #9495a5;
   --input-focus-color: #393a4b;
   --body-bg-color: #f2f2f2;
   --task-border: #e3e4f1;
@@ -35,6 +37,7 @@ body[data-theme="light"] {
 body[data-theme="dark"] {
   --bg-img: url(./images/bg-mobile-dark.jpg);
   --form-bg: #25273d;
+  --input-text-color: #767992;
   --input-focus-color: #c8cbe7;
   --body-bg-color: hsl(237deg 20% 10%);
   --task-border: #393a4b;
@@ -140,7 +143,7 @@ input[type="text"] {
   font-family: "Josefin Sans", sans-serif;
   font-size: 12px;
   line-height: 12px;
-  color: #9495a5;
+  color: var(--input-text-color);
   border: none;
   flex-grow: 1;
   background-color: var(--form-bg);
@@ -262,7 +265,7 @@ input[type="text"]:focus {
     font-size: 14px;
   }
 
-  .cross-icon{
+  .cross-icon {
     display: none;
   }
 
