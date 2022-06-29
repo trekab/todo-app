@@ -9,6 +9,8 @@
   --task-color: #494c6b;
   --task-list-hover: #494c6b;
   --form-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  --checkbox-border: #9495a5;
+  --text-cross: #d1d2da;
 }
 
 * {
@@ -26,6 +28,8 @@ body[data-theme="light"] {
   --task-color: #494c6b;
   --task-list-hover: #494c6b;
   --form-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  --checkbox-border: #9495a5;
+  --text-cross: #d1d2da;
 }
 
 body[data-theme="dark"] {
@@ -37,6 +41,8 @@ body[data-theme="dark"] {
   --task-color: #c8cbe7;
   --task-list-hover: #e3e4f1;
   --form-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+  --checkbox-border: #393a4b;
+  --text-cross: #4d5067;
 }
 
 body {
@@ -94,18 +100,40 @@ input[type="checkbox"] {
   appearance: none;
   height: 20px;
   width: 20px;
-  border: 1px solid #9495a5;
+  border: 1.5px solid var(--checkbox-border);
   border-radius: 50%;
   cursor: pointer;
   margin: 0 12px;
 }
 
-input[type="checkbox"]:checked {
-  /* background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%); */
+/* input[type="checkbox"]:checked {
   background-image: url("./images/icon-check.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 7.25px auto;
+} */
+
+input[type="checkbox"]:hover {
+  background: linear-gradient(var(--form-bg) 0 0) padding-box,
+    linear-gradient(135deg, #55ddff 0%, #c058f3 100%) border-box;
+  border: 1.5px solid transparent;
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:checked:hover {
+  background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+  /* background-image: url("./images/icon-check.svg"); */
+  /* background-color: #55ddff; */
+  border: 1.5px solid var(--checkbox-border);
+  /* background-repeat: no-repeat;
+  background-position: center;
+  background-size: 7.25px auto; */
+}
+
+input[type="checkbox"]:checked + .task-description {
+  text-decoration: line-through;
+  color: var(--text-cross);
 }
 
 input[type="text"] {
@@ -154,6 +182,9 @@ input[type="text"]:focus {
 .task input {
   margin-left: 0;
 }
+.task-description {
+  flex-grow: 1;
+}
 
 .task-list__footer {
   height: 52px;
@@ -169,6 +200,11 @@ input[type="text"]:focus {
 .task-list__footer div:hover {
   color: var(--task-list-hover);
   cursor: pointer;
+}
+
+.cross-icon {
+  width: 12px;
+  height: 12px;
 }
 
 @media (min-width: 576px) {
