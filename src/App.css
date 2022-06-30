@@ -321,19 +321,6 @@ input[type="text"]:focus {
     display: inline-block;
   }
 
-  .task-filters span:hover {
-    color: var(--task-list-hover);
-    cursor: pointer;
-  }
-
-  .task-filters span:first-of-type {
-    color: #3a7cfd;
-  }
-
-  .task-filters span {
-    margin: 0 12px;
-  }
-
   .filters {
     display: none;
   }

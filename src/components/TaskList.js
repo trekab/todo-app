@@ -10,7 +10,7 @@ const TaskList = ({ tasks }) => {
           <Task task={task} key={i} />
         ))}
         <li className="task-list__footer">
-          <div className="task-list__footer--item">5 items left</div>
+          <div>5 items left</div>
           {/* <Filters /> */}
           <div className="task-list__footer--item">Clear Completed</div>
         </li>
