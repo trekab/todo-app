@@ -11,12 +11,18 @@ const TaskList = ({ tasks }) => {
         ))}
         <li className="task-list__footer">
           <div>5 items left</div>
-          {/* <Filters /> */}
+          <div className="task-list__filters">
+            <Filters
+              all="all-tasks"
+              active="active-tasks"
+              completed="completed-tasks"
+            />
+          </div>
           <div className="task-list__footer--item">Clear Completed</div>
         </li>
       </ul>
       <div className="filters">
-        <Filters />
+        <Filters all="all" active="active" completed="completed" />
       </div>
     </>
   );

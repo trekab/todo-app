@@ -12,7 +12,9 @@
   --form-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
   --checkbox-border: #9495a5;
   --text-cross: #d1d2da;
+  --filter-color: #9495a5;
   --filter-hover: #494c6b;
+  --footer-color: #9495a5;
 }
 
 * {
@@ -33,7 +35,9 @@ body[data-theme="light"] {
   --form-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
   --checkbox-border: #9495a5;
   --text-cross: #d1d2da;
+  --filter-color: #9495a5;
   --filter-hover: #494c6b;
+  --footer-color: #9495a5;
 }
 
 body[data-theme="dark"] {
@@ -48,7 +52,9 @@ body[data-theme="dark"] {
   --form-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
   --checkbox-border: #393a4b;
   --text-cross: #4d5067;
+  --filter-color: #5b5e7e;
   --filter-hover: #e3e4f1;
+  --footer-color: #5b5e7e;
 }
 
 body {
@@ -225,7 +231,7 @@ input[type="text"]:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #9495a5;
+  color: var(--filter-color);
   font-size: 14px;
   font-weight: 700;
   line-height: 14px;
@@ -235,6 +241,7 @@ input[type="text"]:focus {
 
 .task-filters {
   margin-right: 8px;
+  color: var(--filter-color);
 }
 
 .task-filters input {
@@ -250,6 +257,20 @@ input[type="text"]:focus {
 .task-filters input:hover + label {
   color: var(--filter-hover);
   cursor: pointer;
+}
+
+.task-list__filters {
+  display: none;
+}
+
+.app-footer {
+  margin-top: 64px;
+  margin-bottom: 64px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: var(--footer-color);
 }
 
 @media (min-width: 576px) {
@@ -317,7 +338,7 @@ input[type="text"]:focus {
     height: 18px;
   }
 
-  .task-filters {
+  .task-list__filters {
     display: inline-block;
   }
 

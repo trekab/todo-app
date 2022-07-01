@@ -21,6 +21,7 @@ function App() {
       <Header />
       <AddTaskForm />
       <TaskList tasks={tasks} />
+      <footer className="app-footer">Drag and drop to reorder list</footer>
     </div>
   );
 }
