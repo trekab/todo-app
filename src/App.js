@@ -2,9 +2,8 @@ import "./App.css";
 import Header from "./components/Header";
 import AddTaskForm from "./components/AddTaskForm";
 import TaskList from "./components/TaskList";
-import { useState } from "react";
 
-function App() {
+const App = () => {
   let sampleTasks = [
     "Complete online JavaScript course",
     "Jog around the park 3x",
@@ -14,16 +13,14 @@ function App() {
     "Complete Todo app from Frontend Mentor",
   ];
 
-  const [tasks, setTasks] = useState(sampleTasks);
-
   return (
     <div className="App">
       <Header />
       <AddTaskForm />
-      <TaskList tasks={tasks} />
+      <TaskList tasks={sampleTasks} />
       <footer className="app-footer">Drag and drop to reorder list</footer>
     </div>
   );
-}
+};
 
 export default App;
