@@ -17,6 +17,7 @@ const AddTaskForm = ({ addTask }) => {
           setTask(e.target.value);
         }}
         value={task}
+        required
       />
     </form>
   );

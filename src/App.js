@@ -9,12 +9,12 @@ const App = () => {
     {
       id: Math.ceil(Math.random() * 1000000000),
       title: "Complete online JavaScript course",
-      completed: false,
+      completed: true,
     },
     {
       id: Math.ceil(Math.random() * 1000000000),
       title: "Jog around the park 3x",
-      completed: true,
+      completed: false,
     },
     {
       id: Math.ceil(Math.random() * 1000000000),
@@ -24,7 +24,7 @@ const App = () => {
     {
       id: Math.ceil(Math.random() * 1000000000),
       title: "Read for 1 hour",
-      completed: true,
+      completed: false,
     },
     {
       id: Math.ceil(Math.random() * 1000000000),
