@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
-const AddTaskForm = () => {
+const AddTaskForm = ({ addTask }) => {
+  const [task, setTask] = useState("");
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    addTask(task);
+    setTask("");
+  };
   return (
-    <form>
-      <input type="checkbox"/>
-      <input type="text" placeholder="Create a new todo..." />
+    <form onSubmit={handleFormSubmit}>
+      <input type="checkbox" />
+      <input
+        type="text"
+        placeholder="Create a new todo..."
+        onChange={(e) => {
+          setTask(e.target.value);
+        }}
+        value={task}
+      />
     </form>
   );
 };
