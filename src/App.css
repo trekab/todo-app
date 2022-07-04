@@ -65,6 +65,13 @@ body {
   background-color: var(--body-bg-color);
 }
 
+#check-mark[mark="mark-true"] {
+  background-image: url("./images/icon-check.svg");
+}
+#check-mark[mark="mark-false"] {
+  background-image: unset;
+}
+
 .App {
   max-width: 327px;
   margin: auto;
@@ -118,12 +125,17 @@ input[type="checkbox"] {
   margin: 0 12px;
 }
 
-/* input[type="checkbox"]:checked {
-  background-image: url("./images/icon-check.svg");
+#check-mark {
+  width: 7.25px;
+  height: 5px;
+
   background-repeat: no-repeat;
+  background-size: contain;
   background-position: center;
-  background-size: 7.25px auto;
-} */
+  position: relative;
+  left: 14px;
+  border-radius: 50%;
+}
 
 input[type="checkbox"]:hover {
   background: linear-gradient(var(--form-bg) 0 0) padding-box,
@@ -135,12 +147,7 @@ input[type="checkbox"]:hover {
 input[type="checkbox"]:checked,
 input[type="checkbox"]:checked:hover {
   background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
-  /* background-image: url("./images/icon-check.svg"); */
-  /* background-color: #55ddff; */
   border: 1.5px solid var(--checkbox-border);
-  /* background-repeat: no-repeat;
-  background-position: center;
-  background-size: 7.25px auto; */
 }
 
 input[type="checkbox"]:checked + .task-description {
@@ -182,7 +189,7 @@ input[type="text"]:focus {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 16px 20px;
+  padding: 16px 10px;
   font-size: 12px;
   line-height: 12px;
   letter-spacing: -0.17px;
@@ -310,6 +317,12 @@ input[type="text"]:focus {
     height: 24px;
     margin-left: 14px;
     margin-right: 18px;
+  }
+
+  #check-mark {
+    width: 8.7px;
+    height: 6px;
+    left: 16px;
   }
 
   .task {
