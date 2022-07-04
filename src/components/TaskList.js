@@ -2,16 +2,25 @@ import React from "react";
 import Filters from "./Filters";
 import Task from "./Task";
 
-const TaskList = ({ tasks, deleteTask }) => {
-  
+const TaskList = ({
+  tasks,
+  deleteTask,
+  updateTaskStatus,
+  clearCompletedTasks,
+}) => {
   return (
     <>
       <ul className="task-list">
-        {tasks.map((task, i) => (
-          <Task task={task} key={i} deleteTask={deleteTask} />
+        {tasks.map((task) => (
+          <Task
+            task={task}
+            key={task.id}
+            deleteTask={deleteTask}
+            updateTaskStatus={updateTaskStatus}
+          />
         ))}
         <li className="task-list__footer">
-          <div>5 items left</div>
+          <div>{tasks.filter((task) => !task.completed).length} items left</div>
           <div className="task-list__filters">
             <Filters
               all="all-tasks"
@@ -19,7 +28,12 @@ const TaskList = ({ tasks, deleteTask }) => {
               completed="completed-tasks"
             />
           </div>
-          <div className="task-list__footer--item">Clear Completed</div>
+          <div
+            className="task-list__footer--item"
+            onClick={clearCompletedTasks}
+          >
+            Clear Completed
+          </div>
         </li>
       </ul>
       <div className="filters">

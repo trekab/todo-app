@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import cross from "../images/icon-cross.svg";
 
-const Task = ({ task, deleteTask }) => {
+const Task = ({ task, deleteTask, updateTaskStatus }) => {
   const [taskCompleted, setTaskCompleted] = useState(task.completed);
 
   const handleTaskStatusChange = () => {
     setTaskCompleted(!taskCompleted);
+    updateTaskStatus(task, !taskCompleted);
   };
 
   const handleDeleteTask = () => {
