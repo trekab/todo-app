@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import AddTaskForm from "./components/AddTaskForm";
 import TaskList from "./components/TaskList";
+import { useState } from "react";
 
 const App = () => {
   let sampleTasks = [
@@ -13,11 +14,17 @@ const App = () => {
     "Complete Todo app from Frontend Mentor",
   ];
 
+  const [tasks, setTasks] = useState(sampleTasks);
+
+  const addTaskHandler = (task) => {
+    setTasks([...tasks, task]);
+  };
+
   return (
     <div className="App">
       <Header />
-      <AddTaskForm />
-      <TaskList tasks={sampleTasks} />
+      <AddTaskForm addTask={addTaskHandler} />
+      <TaskList tasks={tasks} />
       <footer className="app-footer">Drag and drop to reorder list</footer>
     </div>
   );
