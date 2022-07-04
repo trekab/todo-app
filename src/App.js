@@ -7,26 +7,32 @@ import { useState } from "react";
 const App = () => {
   let sampleTasks = [
     {
+      id: Math.ceil(Math.random() * 1000000000),
       title: "Complete online JavaScript course",
       completed: false,
     },
     {
+      id: Math.ceil(Math.random() * 1000000000),
       title: "Jog around the park 3x",
       completed: true,
     },
     {
+      id: Math.ceil(Math.random() * 1000000000),
       title: "10 minutes meditation",
       completed: false,
     },
     {
+      id: Math.ceil(Math.random() * 1000000000),
       title: "Read for 1 hour",
       completed: true,
     },
     {
+      id: Math.ceil(Math.random() * 1000000000),
       title: "Pick up groceries",
       completed: false,
     },
     {
+      id: Math.ceil(Math.random() * 1000000000),
       title: "Complete Todo app from Frontend Mentor",
       completed: false,
     },
@@ -36,6 +42,7 @@ const App = () => {
 
   const addTaskHandler = (task) => {
     const taskObject = {
+      id: Math.ceil(Math.random() * 1000000000),
       title: task,
       completed: false,
     };
@@ -44,7 +51,6 @@ const App = () => {
 
   const deleteTaskHandler = (task) => {
     let newTasks = tasks.filter((currentTask) => currentTask !== task);
-
     setTasks(newTasks);
   };
 

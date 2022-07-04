@@ -3,12 +3,11 @@ import Filters from "./Filters";
 import Task from "./Task";
 
 const TaskList = ({ tasks, deleteTask }) => {
-  
   return (
     <>
       <ul className="task-list">
         {tasks.map((task, i) => (
-          <Task task={task} key={i} deleteTask={deleteTask} />
+          <Task task={task} key={task.id} deleteTask={deleteTask} />
         ))}
         <li className="task-list__footer">
           <div>5 items left</div>
