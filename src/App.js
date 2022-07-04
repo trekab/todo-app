@@ -6,18 +6,40 @@ import { useState } from "react";
 
 const App = () => {
   let sampleTasks = [
-    "Complete online JavaScript course",
-    "Jog around the park 3x",
-    "10 minutes meditation",
-    "Read for 1 hour",
-    "Pick up groceries",
-    "Complete Todo app from Frontend Mentor",
+    {
+      title: "Complete online JavaScript course",
+      completed: true,
+    },
+    {
+      title: "Jog around the park 3x",
+      completed: false,
+    },
+    {
+      title: "10 minutes meditation",
+      completed: false,
+    },
+    {
+      title: "Read for 1 hour",
+      completed: false,
+    },
+    {
+      title: "Pick up groceries",
+      completed: false,
+    },
+    {
+      title: "Complete Todo app from Frontend Mentor",
+      completed: false,
+    },
   ];
 
   const [tasks, setTasks] = useState(sampleTasks);
 
   const addTaskHandler = (task) => {
-    setTasks([...tasks, task]);
+    const taskObject = {
+      title: task,
+      completed: false,
+    };
+    setTasks([...tasks, taskObject]);
   };
 
   return (
