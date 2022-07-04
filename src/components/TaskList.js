@@ -11,7 +11,7 @@ const TaskList = ({
   return (
     <>
       <ul className="task-list">
-        {tasks.map((task, i) => (
+        {tasks.map((task) => (
           <Task
             task={task}
             key={task.id}
@@ -20,7 +20,7 @@ const TaskList = ({
           />
         ))}
         <li className="task-list__footer">
-          <div>5 items left</div>
+          <div>{tasks.filter((task) => !task.completed).length} items left</div>
           <div className="task-list__filters">
             <Filters
               all="all-tasks"
