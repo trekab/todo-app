@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import cross from "../images/icon-cross.svg";
 
-const Task = ({ task }) => {
+const Task = ({ task, deleteTask }) => {
   const [taskCompleted, setTaskCompleted] = useState(task.completed);
 
   const handleTaskStatusChange = () => {
     setTaskCompleted(!taskCompleted);
+  };
+
+  const handleDeleteTask = () => {
+    deleteTask(task);
   };
 
   return (
@@ -16,7 +20,12 @@ const Task = ({ task }) => {
         onChange={handleTaskStatusChange}
       />
       <p className="task-description">{task.title}</p>
-      <img src={cross} alt="cross" className="cross-icon" />
+      <img
+        src={cross}
+        alt="cross"
+        className="cross-icon"
+        onClick={handleDeleteTask}
+      />
     </li>
   );
 };

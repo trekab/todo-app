@@ -8,11 +8,11 @@ const App = () => {
   let sampleTasks = [
     {
       title: "Complete online JavaScript course",
-      completed: true,
+      completed: false,
     },
     {
       title: "Jog around the park 3x",
-      completed: false,
+      completed: true,
     },
     {
       title: "10 minutes meditation",
@@ -20,7 +20,7 @@ const App = () => {
     },
     {
       title: "Read for 1 hour",
-      completed: false,
+      completed: true,
     },
     {
       title: "Pick up groceries",
@@ -42,11 +42,17 @@ const App = () => {
     setTasks([...tasks, taskObject]);
   };
 
+  const deleteTaskHandler = (task) => {
+    let newTasks = tasks.filter((currentTask) => currentTask !== task);
+
+    setTasks(newTasks);
+  };
+
   return (
     <div className="App">
       <Header />
       <AddTaskForm addTask={addTaskHandler} />
-      <TaskList tasks={tasks} />
+      <TaskList tasks={tasks} deleteTask={deleteTaskHandler} />
       <footer className="app-footer">Drag and drop to reorder list</footer>
     </div>
   );

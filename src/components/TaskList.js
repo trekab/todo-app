@@ -2,12 +2,13 @@ import React from "react";
 import Filters from "./Filters";
 import Task from "./Task";
 
-const TaskList = ({ tasks }) => {
+const TaskList = ({ tasks, deleteTask }) => {
+  
   return (
     <>
       <ul className="task-list">
         {tasks.map((task, i) => (
-          <Task task={task} key={i} />
+          <Task task={task} key={i} deleteTask={deleteTask} />
         ))}
         <li className="task-list__footer">
           <div>5 items left</div>
