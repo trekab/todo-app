@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Filters = ({ all, active, completed }) => {
+  const filterValues = [all, active, completed];
+  const [filter, setFilter] = useState("All");
+
+  const filterChangeHandler = (e) => {
+    setFilter(e.currentTarget.value);
+  };
+
   return (
     <div className="task-filters">
-      <input type="radio" id={all} name="filter" value="All" />
-      <label htmlFor={all}>All</label>
-      <input type="radio" id={active} name="filter" value="Active" />
-      <label htmlFor={active}>Active</label>
-      <input type="radio" id={completed} name="filter" value="Completed" />
-      <label htmlFor={completed}>Completed</label>
+      {filterValues.map((f) => (
+        <div key={f}>
+          <input
+            type="radio"
+            id={f}
+            name="filter"
+            value={f}
+            onChange={filterChangeHandler}
+            checked={filter === f}
+          />
+          <label htmlFor={f}>{f}</label>
+        </div>
+      ))}
     </div>
   );
 };

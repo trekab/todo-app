@@ -249,6 +249,7 @@ input[type="text"]:focus {
 }
 
 .task-filters {
+  display: flex;
   margin-right: 8px;
   color: var(--filter-color);
 }
@@ -266,10 +267,6 @@ input[type="text"]:focus {
 .task-filters input:hover + label {
   color: var(--filter-hover);
   cursor: pointer;
-}
-
-.task-list__filters {
-  display: none;
 }
 
 .app-footer {
@@ -353,11 +350,15 @@ input[type="text"]:focus {
     height: 18px;
   }
 
-  .task-list__filters {
-    display: inline-block;
+  .filters {
+    min-width: unset;
+    width: 166px;
+    height: 18px;
+    position: relative;
+    top: -63px;
   }
 
-  .filters {
-    display: none;
+  .task-filters {
+    margin-right: 0;
   }
 }
