@@ -270,7 +270,7 @@ input[type="text"]:focus {
 }
 
 .app-footer {
-  margin-top: 64px;
+  margin-top: 35px;
   margin-bottom: 64px;
   text-align: center;
   font-size: 14px;
@@ -360,5 +360,9 @@ input[type="text"]:focus {
 
   .task-filters {
     margin-right: 0;
+  }
+
+  .app-footer {
+    margin-top: -20px;
   }
 }
