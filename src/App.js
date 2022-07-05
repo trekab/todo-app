@@ -47,7 +47,8 @@ const App = () => {
       title: task,
       completed: false,
     };
-    setTasks([...tasks, taskObject]);
+    setTasks([...allTasks, taskObject]);
+    setAllTasks([...allTasks, taskObject]);
   };
 
   const taskStatusHandler = (task, status) => {
@@ -57,7 +58,7 @@ const App = () => {
       }
       return t;
     });
-
+    setAllTasks(newTasks);
     setTasks(newTasks);
   };
 
