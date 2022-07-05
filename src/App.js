@@ -47,36 +47,70 @@ const App = () => {
       title: task,
       completed: false,
     };
-    setTasks([...allTasks, taskObject]);
-    setAllTasks([...allTasks, taskObject]);
+    setTasks((prevTasks) => {
+      const updatedTasks = [...prevTasks, taskObject];
+      return updatedTasks;
+    });
+    setAllTasks((prevTasks) => {
+      const updatedTasks = [...prevTasks, taskObject];
+      return updatedTasks;
+    });
   };
 
   const taskStatusHandler = (task, status) => {
-    let newTasks = tasks.map((t) => {
-      if (t.id === task.id) {
-        t.completed = status;
-      }
-      return t;
+    setAllTasks((prevTasks) => {
+      const updatedTasks = [...prevTasks].map((t) => {
+        if (t.id === task.id) {
+          t.completed = status;
+        }
+        return t;
+      });
+      return updatedTasks;
     });
-    setAllTasks(newTasks);
-    setTasks(newTasks);
+    setTasks((prevTasks) => {
+      const updatedTasks = [...prevTasks].map((t) => {
+        if (t.id === task.id) {
+          t.completed = status;
+        }
+        return t;
+      });
+      return updatedTasks;
+    });
   };
 
   const deleteTaskHandler = (task) => {
-    let newTasks = allTasks.filter((currentTask) => currentTask !== task);
-    setAllTasks(newTasks);
-    setTasks(newTasks);
+    setAllTasks((prevTasks) => {
+      const updatedTasks = prevTasks.filter(
+        (currentTask) => currentTask !== task
+      );
+
+      return updatedTasks;
+    });
+    setTasks((prevTasks) => {
+      const updatedTasks = prevTasks.filter(
+        (currentTask) => currentTask !== task
+      );
+
+      return updatedTasks;
+    });
   };
 
   const clearCompletedTasksHandler = () => {
-    let newTasks = allTasks.filter((task) => !task.completed);
-    setAllTasks(newTasks);
-    setTasks(newTasks);
+    setAllTasks((prevTasks) => {
+      const updatedTasks = prevTasks.filter((task) => !task.completed);
+      return updatedTasks;
+    });
+    setTasks((prevTasks) => {
+      const updatedTasks = prevTasks.filter((task) => !task.completed);
+      return updatedTasks;
+    });
   };
 
   const showActiveTasks = () => {
-    let newTasks = allTasks.filter((task) => !task.completed);
-    setTasks(newTasks);
+    setTasks(() => {
+      const updatedTasks = allTasks.filter((task) => !task.completed);
+      return updatedTasks;
+    });
   };
 
   const showAllTasks = () => {
@@ -84,8 +118,10 @@ const App = () => {
   };
 
   const showCompletedTasks = () => {
-    let newTasks = allTasks.filter((task) => task.completed);
-    setTasks(newTasks);
+    setTasks(() => {
+      const updatedTasks = allTasks.filter((task) => task.completed);
+      return updatedTasks;
+    });
   };
 
   return (
