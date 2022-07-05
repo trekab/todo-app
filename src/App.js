@@ -38,7 +38,8 @@ const App = () => {
     },
   ];
 
-  const [tasks, setTasks] = useState(sampleTasks);
+  const [allTasks, setAllTasks] = useState(sampleTasks);
+  const [tasks, setTasks] = useState(allTasks);
 
   const addTaskHandler = (task) => {
     const taskObject = {
@@ -61,13 +62,28 @@ const App = () => {
   };
 
   const deleteTaskHandler = (task) => {
-    let newTasks = tasks.filter((currentTask) => currentTask !== task);
+    let newTasks = allTasks.filter((currentTask) => currentTask !== task);
+    setAllTasks(newTasks);
     setTasks(newTasks);
   };
 
   const clearCompletedTasksHandler = () => {
-    let newTasks = tasks.filter((task) => !task.completed);
+    let newTasks = allTasks.filter((task) => !task.completed);
+    setAllTasks(newTasks);
+    setTasks(newTasks);
+  };
 
+  const showActiveTasks = () => {
+    let newTasks = allTasks.filter((task) => !task.completed);
+    setTasks(newTasks);
+  };
+
+  const showAllTasks = () => {
+    setTasks(allTasks);
+  };
+
+  const showCompletedTasks = () => {
+    let newTasks = allTasks.filter((task) => task.completed);
     setTasks(newTasks);
   };
 
@@ -76,10 +92,14 @@ const App = () => {
       <Header />
       <AddTaskForm addTask={addTaskHandler} />
       <TaskList
+        tasksTotal={allTasks}
         tasks={tasks}
         deleteTask={deleteTaskHandler}
         updateTaskStatus={taskStatusHandler}
         clearCompletedTasks={clearCompletedTasksHandler}
+        activeTasks={showActiveTasks}
+        allTasks={showAllTasks}
+        completedTasks={showCompletedTasks}
       />
       <footer className="app-footer">Drag and drop to reorder list</footer>
     </div>

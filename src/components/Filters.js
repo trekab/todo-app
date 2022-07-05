@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 
-const Filters = ({ all, active, completed }) => {
-  const filterValues = [all, active, completed];
+const Filters = ({ activeTasks, completedTasks, allTasks }) => {
+  const filterValues = ["All", "Active", "Completed"];
   const [filter, setFilter] = useState("All");
 
   const filterChangeHandler = (e) => {
     setFilter(e.currentTarget.value);
+    if (e.currentTarget.value === "Active") {
+      activeTasks();
+    } else if (e.currentTarget.value === "Completed") {
+      completedTasks();
+    } else {
+      allTasks();
+    }
   };
 
   return (

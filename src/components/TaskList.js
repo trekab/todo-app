@@ -3,10 +3,14 @@ import Filters from "./Filters";
 import Task from "./Task";
 
 const TaskList = ({
+  tasksTotal,
   tasks,
   deleteTask,
   updateTaskStatus,
   clearCompletedTasks,
+  activeTasks,
+  completedTasks,
+  allTasks,
 }) => {
   return (
     <>
@@ -20,10 +24,9 @@ const TaskList = ({
           />
         ))}
         <li className="task-list__footer">
-          <div>{tasks.filter((task) => !task.completed).length} items left</div>
-          {/* <div className="task-list__filters">
-            <Filters all="all" active="active" completed="completed" />
-          </div> */}
+          <div>
+            {tasksTotal.filter((task) => !task.completed).length} items left
+          </div>
           <div
             className="task-list__footer--item"
             onClick={clearCompletedTasks}
@@ -33,7 +36,11 @@ const TaskList = ({
         </li>
       </ul>
       <div className="filters">
-        <Filters all="All" active="Active" completed="Completed" />
+        <Filters
+          activeTasks={activeTasks}
+          completedTasks={completedTasks}
+          allTasks={allTasks}
+        />
       </div>
     </>
   );
