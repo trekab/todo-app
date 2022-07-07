@@ -279,6 +279,17 @@ input[type="text"]:focus {
   color: var(--footer-color);
 }
 
+#tasks {
+  min-height: 300px;
+}
+
+.empty-tasks-note {
+  color: var(--filter-color);
+  text-align: center;
+  height: 100%;
+  padding-top: 50%;
+}
+
 @media (min-width: 576px) {
   body[data-theme="light"] {
     --bg-img: url(./images/bg-desktop-light.jpg);
@@ -364,5 +375,9 @@ input[type="text"]:focus {
 
   .app-footer {
     margin-top: -20px;
+  }
+
+  #tasks {
+    min-height: 500px;
   }
 }
