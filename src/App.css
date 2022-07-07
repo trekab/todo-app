@@ -197,6 +197,7 @@ input[type="text"]:focus {
   height: 52px;
   border-bottom: 1px solid var(--task-border);
   cursor: pointer;
+  max-width: 375px;
 }
 
 .task input {
@@ -336,6 +337,7 @@ input[type="text"]:focus {
 
   .task {
     height: 64px;
+    max-width: 541px;
   }
 
   .task,
