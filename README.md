@@ -26,14 +26,14 @@ Users should be able to:
 - Filter by all/active/complete todos
 - Clear all completed todos
 - Toggle light and dark mode
-- **Bonus**: Drag and drop to reorder items on the list
+- **Bonus**: Drag and drop to reorder items on the list(`Coming Soon!`)
 
 ### Screenshot
 
 ![](./design/desktop-preview.jpg)
 
 ### Links
-- Live Site URL: [Calculator App](https://todo-app-trekab.netlify.app/)
+- Live Site URL: [Todo App](https://todo-app-trekab.netlify.app/)
 
 ## My process
 
