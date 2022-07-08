@@ -3,7 +3,7 @@ import moon from "../images/icon-moon.svg";
 import sun from "../images/icon-sun.svg";
 
 const Header = () => {
-  const [icon, setIcon] = useState(moon);
+  const [icon, setIcon] = useState(sun);
 
   const handleIconClick = () => {
     if (icon === moon) {

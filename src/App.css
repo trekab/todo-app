@@ -1,20 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
 
 :root {
-  --bg-img: url(./images/bg-mobile-light.jpg);
-  --form-bg: #ffffff;
-  --input-text-color: #9495a5;
-  --input-focus-color: #393a4b;
-  --body-bg-color: #f2f2f2;
-  --task-border: #e3e4f1;
-  --task-color: #494c6b;
-  --task-list-hover: #494c6b;
-  --form-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
-  --checkbox-border: #9495a5;
-  --text-cross: #d1d2da;
-  --filter-color: #9495a5;
-  --filter-hover: #494c6b;
-  --footer-color: #9495a5;
+  --bg-img: url(./images/bg-mobile-dark.jpg);
+  --form-bg: #25273d;
+  --input-text-color: #767992;
+  --input-focus-color: #c8cbe7;
+  --body-bg-color: hsl(237deg 20% 10%);
+  --task-border: #393a4b;
+  --task-color: #c8cbe7;
+  --task-list-hover: #e3e4f1;
+  --form-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+  --checkbox-border: #393a4b;
+  --text-cross: #4d5067;
+  --filter-color: #5b5e7e;
+  --filter-hover: #e3e4f1;
+  --footer-color: #5b5e7e;
 }
 
 * {
