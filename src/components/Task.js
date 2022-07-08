@@ -18,13 +18,16 @@ const Task = ({ task, deleteTask, updateTaskStatus }) => {
       <div
         className="check-mark"
         mark={taskCompleted ? "mark-true" : "mark-false"}
-      ></div><label></label>
+      ></div>
       <input
         type="checkbox"
         checked={taskCompleted}
         onChange={handleTaskStatusChange}
+        id={task.id}
       />
-      <p className="task-description">{task.title}</p>
+      <label htmlFor={task.id} className="task-description">
+        {task.title}
+      </label>
       <img
         src={cross}
         alt="cross"

@@ -205,6 +205,7 @@ input[type="text"]:focus {
 }
 .task-description {
   flex-grow: 1;
+  cursor: pointer;
 }
 
 .task-list__footer {
