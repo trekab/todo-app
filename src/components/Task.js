@@ -16,9 +16,9 @@ const Task = ({ task, deleteTask, updateTaskStatus }) => {
   return (
     <li className="task">
       <div
-        id="check-mark"
+        className="check-mark"
         mark={taskCompleted ? "mark-true" : "mark-false"}
-      ></div>
+      ></div><label></label>
       <input
         type="checkbox"
         checked={taskCompleted}

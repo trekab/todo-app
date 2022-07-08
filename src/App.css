@@ -65,10 +65,10 @@ body {
   background-color: var(--body-bg-color);
 }
 
-#check-mark[mark="mark-true"] {
+.check-mark[mark="mark-true"] {
   background-image: url("./images/icon-check.svg");
 }
-#check-mark[mark="mark-false"] {
+.check-mark[mark="mark-false"] {
   background-image: unset;
 }
 
@@ -125,7 +125,7 @@ input[type="checkbox"] {
   margin: 0 12px;
 }
 
-#check-mark {
+.check-mark {
   width: 7.25px;
   height: 5px;
 
@@ -280,10 +280,6 @@ input[type="text"]:focus {
   color: var(--footer-color);
 }
 
-#tasks {
-  min-height: 300px;
-}
-
 .empty-tasks-note {
   color: var(--filter-color);
   text-align: center;
@@ -329,7 +325,7 @@ input[type="text"]:focus {
     margin-right: 18px;
   }
 
-  #check-mark {
+  .check-mark {
     width: 8.7px;
     height: 6px;
     left: 16px;
@@ -377,9 +373,5 @@ input[type="text"]:focus {
 
   .app-footer {
     margin-top: -20px;
-  }
-
-  #tasks {
-    min-height: 500px;
   }
 }

@@ -9,7 +9,7 @@ const AddTaskForm = ({ addTask }) => {
   };
   return (
     <form onSubmit={handleFormSubmit}>
-      <input type="checkbox" />
+      <input type="checkbox" /><label></label>
       <input
         type="text"
         placeholder="Create a new todo..."
@@ -18,7 +18,7 @@ const AddTaskForm = ({ addTask }) => {
         }}
         value={task}
         required
-      />
+      /><label></label>
     </form>
   );
 };
