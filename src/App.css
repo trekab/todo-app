@@ -65,10 +65,10 @@ body {
   background-color: var(--body-bg-color);
 }
 
-.check-mark[mark="mark-true"] {
+.check-mark[data-mark="mark-true"] {
   background-image: url("./images/icon-check.svg");
 }
-.check-mark[mark="mark-false"] {
+.check-mark[data-mark="mark-false"] {
   background-image: unset;
 }
 
