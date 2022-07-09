@@ -18,9 +18,9 @@ const Header = () => {
   return (
     <div className="header">
       <h1>TODO</h1>
-      <div className="theme-icon">
+      <button className="theme-icon">
         <img src={icon} alt="theme icon" onClick={handleIconClick} />
-      </div>
+      </button>
     </div>
   );
 };

@@ -95,6 +95,8 @@ body {
   cursor: pointer;
   width: 20px;
   height: 20px;
+  background-color: transparent;
+  border: none;
 }
 
 .theme-icon img {
