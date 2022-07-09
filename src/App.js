@@ -127,17 +127,19 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <AddTaskForm addTask={addTaskHandler} />
-      <TaskList
-        tasksTotal={allTasks}
-        tasks={tasks}
-        deleteTask={deleteTaskHandler}
-        updateTaskStatus={taskStatusHandler}
-        clearCompletedTasks={clearCompletedTasksHandler}
-        activeTasks={showActiveTasks}
-        allTasks={showAllTasks}
-        completedTasks={showCompletedTasks}
-      />
+      <main>
+        <AddTaskForm addTask={addTaskHandler} />
+        <TaskList
+          tasksTotal={allTasks}
+          tasks={tasks}
+          deleteTask={deleteTaskHandler}
+          updateTaskStatus={taskStatusHandler}
+          clearCompletedTasks={clearCompletedTasksHandler}
+          activeTasks={showActiveTasks}
+          allTasks={showAllTasks}
+          completedTasks={showCompletedTasks}
+        />
+      </main>
       <footer className="app-footer">Drag and drop to reorder list</footer>
     </div>
   );

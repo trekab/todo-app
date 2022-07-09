@@ -16,12 +16,12 @@ const Header = () => {
   };
 
   return (
-    <div className="header">
+    <header className="header">
       <h1>TODO</h1>
       <button className="theme-icon">
         <img src={icon} alt="theme icon" onClick={handleIconClick} />
       </button>
-    </div>
+    </header>
   );
 };
 
