@@ -1,0 +1,36 @@
+.header {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  height: 20px;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 15px;
+}
+
+.theme-icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.theme-icon img {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .header {
+    font-size: 19px;
+    height: 48px;
+  }
+
+  .theme-icon {
+    width: 26px;
+    height: 26px;
+  }
+}
