@@ -10,6 +10,7 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
@@ -45,6 +46,10 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
+
+### Useful resources
+
+- [How do I use drag and drop with React?](https://www.rootstack.com/en/blog/how-do-i-use-drag-and-drop-react/) - This article helped implement the drag and drop feature. I'd recommend it to anyone still learning this concept.
 
 ## Author
 

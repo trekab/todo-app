@@ -138,6 +138,7 @@ const App = () => {
           activeTasks={showActiveTasks}
           allTasks={showAllTasks}
           completedTasks={showCompletedTasks}
+          rearrangeTasks={setTasks}
         />
       </main>
       <footer className="app-footer">Drag and drop to reorder list</footer>

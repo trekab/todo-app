@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import cross from "../images/icon-cross.svg";
 
-const Task = ({ task, deleteTask, updateTaskStatus }) => {
+const Task = ({
+  task,
+  deleteTask,
+  updateTaskStatus,
+  onDragStart,
+  taskIndex,
+  onDragEnter,
+  onDragEnd,
+}) => {
   const [taskCompleted, setTaskCompleted] = useState(task.completed);
 
   const handleTaskStatusChange = () => {
@@ -14,7 +22,13 @@ const Task = ({ task, deleteTask, updateTaskStatus }) => {
   };
 
   return (
-    <li className="task">
+    <li
+      className="task"
+      draggable
+      onDragStart={(e) => onDragStart(e, taskIndex)}
+      onDragEnter={(e) => onDragEnter(e, taskIndex)}
+      onDragEnd={onDragEnd}
+    >
       <div
         className="check-mark"
         data-mark={taskCompleted ? "mark-true" : "mark-false"}
