@@ -15,18 +15,14 @@ const TaskList = ({
   return (
     <>
       <ul className="task-list">
-        {tasks.length > 0 ? (
-          tasks.map((task) => (
-            <Task
-              task={task}
-              key={task.id}
-              deleteTask={deleteTask}
-              updateTaskStatus={updateTaskStatus}
-            />
-          ))
-        ) : (
-          <p className="empty-tasks-note">No tasks available</p>
-        )}
+        {tasks.map((task) => (
+          <Task
+            task={task}
+            key={task.id}
+            deleteTask={deleteTask}
+            updateTaskStatus={updateTaskStatus}
+          />
+        ))}
         <li className="task-list__footer">
           <div>
             {tasksTotal.filter((task) => !task.completed).length} items left

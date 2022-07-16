@@ -108,13 +108,6 @@
   color: var(--footer-color);
 }
 
-.empty-tasks-note {
-  color: var(--filter-color);
-  text-align: center;
-  height: 100%;
-  padding-top: 50%;
-}
-
 @media (min-width: 576px) {
   .task {
     height: 64px;
