@@ -17,14 +17,12 @@ const TaskList = ({
   const dragOverItem = useRef();
   const dragStart = (e, position) => {
     dragItem.current = position;
-    console.log(e.target.innerHTML);
   };
   const dragEnter = (e, position) => {
     dragOverItem.current = position;
-    console.log(e.target.innerHTML);
   };
 
-  const drop = (e) => {
+  const drop = () => {
     const copyListItems = [...tasks];
     const dragItemContent = copyListItems[dragItem.current];
     copyListItems.splice(dragItem.current, 1);
@@ -32,7 +30,6 @@ const TaskList = ({
     dragItem.current = null;
     dragOverItem.current = null;
     rearrangeTasks(copyListItems);
-    // setList(copyListItems);
   };
   return (
     <>
